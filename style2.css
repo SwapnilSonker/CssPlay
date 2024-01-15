@@ -1,0 +1,66 @@
+.container {
+    display: grid;
+    /* height: 600px; */
+    /*rows is basically for the height of the grid */
+    /* grid-template-rows: repeat(4,100px);  */
+
+    /* column is basically for the width of the grid */
+    /* grid-template-columns: repeat(auto-fit,minmax(100px, 1fr)); */
+
+    /* grid-template-columns: var(--left , 87px) auto ; */
+    grid-template-columns: 48px auto;
+    /* justify-content: space-evenly;
+    align-content:space-evenly ; */
+    transition: 300ms;
+    transition-delay: 200ms;
+
+    /* justify-items: start;
+    align-items: end; */
+
+
+    /* these properties align the items in header and footer form */
+    /* grid-template-areas: 
+    'header header'
+    'main aside'
+    'footer footer'
+    ; */
+
+}
+
+.container:has(.item-1:hover){
+     grid-template-columns: 300px auto;
+     
+     /* --left : 67% */
+}
+.container:has(.item-2:hover){
+    grid-template-columns: 60% auto;
+}
+
+/* .item-1{
+    justify-self: center;
+    align-self: stretch;
+} */
+
+/* .item-1{
+
+
+    
+
+    grid-area: header;
+}
+
+ .item-2 { 
+    
+
+    grid-area: main;
+    
+} 
+.item-3{
+   
+
+    grid-area: aside;
+}
+
+.item-4{
+    grid-area: footer;
+} */
