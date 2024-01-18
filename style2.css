@@ -98,7 +98,28 @@
     color:brown;
 }
 
-@keyframes sliding {
+/* Utility classes  */
+.animate{
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.animate.animate--fast{
+    animation-duration: 0.6s;
+}
+
+.animate.animate--slow{
+    animation-duration: 5s;
+}
+
+.animate.animate-delay-1s{
+    animation-delay: 1s;
+}
+
+.animate.animate--infinite{
+    animation-iteration-count: infinite;
+}
+@keyframes slideinleft {
     from{
         transform: translateX(-300px);
     }
@@ -107,7 +128,7 @@
         transform: translateX(0px);
     }
 }
-.heading{
+.slideinleft{
 
     animation: sliding 1s ease-in-out 1s 2 normal forwards;
     /* animation-fill-mode: backwards; */
@@ -119,4 +140,33 @@
     color: black;
 
     transform: translateX(-150px);
+}
+
+@keyframes slideinright {
+    from{
+        transform: translateX(300px);
+    }
+
+    to{
+        transform: translateX(0px);
+    }
+}
+
+.slideinright{
+    animation-name: slideinright;
+    animation-timing-function: ease-in;
+}
+@keyframes sliderotate {
+    from{
+        transform: rotate(0);
+    }
+
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.animate.slideinrotate{
+    animation-name: sliderotate;
+    animation-timing-function: linear;
 }
