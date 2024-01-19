@@ -170,3 +170,90 @@
     animation-name: sliderotate;
     animation-timing-function: linear;
 }
+/* .body{
+    margin: 0;
+    overflow: hidden;
+} */
+@keyframes carouselFrame{
+    0% {
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateX(-100%);
+    }
+    50%{
+        transform: translateX(-200%);
+    }
+    75%{
+        transform: translateX(-300%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+.carouselSection{
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    /* transition: 0.8s; */
+    /* transition: width 2s ease;  */
+    /* overflow: hidden; */
+    /* width: 100%;  */
+    /* animation: carousel 5s infinite;  */
+}
+/* .carouselSlide{
+    min-width: 100px;
+    box-sizing: border-box;
+    transition: transform 0.5s ease;
+
+} */
+.all{
+    height:50vh;
+    width: 30px;
+    border-radius: 2rem;
+    text-align: center;
+    transition: 0.3s;
+    opacity: 0.5;
+    transition-duration: 1s;
+
+}
+.div1{
+    /* height:50vh;
+    min-width: 30px;
+    border-radius: 2rem; */
+    /* width: 30px; */
+    background-color: #0000ff;
+
+    /* text-align: center; */
+    
+}
+.div2{
+    /* height:50vh;
+    min-width: 30px;
+    border-radius: 2rem;
+    text-align: center; */
+    background-color: brown;
+}
+.div3{
+    background-color: chocolate;
+}
+.div4{
+    background-color: yellowgreen;
+}
+.div1:hover ,.div2:hover, .div3:hover , .div4:hover{
+    width: 10%;
+    opacity:1;
+    z-index: 9999;
+}
+/* .div2:hover{
+    width:10%;
+} */
+
+.film{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.all2{
+    
+}
