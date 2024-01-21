@@ -256,8 +256,8 @@
     height:50vh;
 }
 .all2{
-    height:50%;
-    width:15%;
+    height:50vh;
+    width:20%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     text-align: center;
     transition: 0.3s;
@@ -271,8 +271,8 @@
     filter: blur(2px);
 } */
 .all2:hover{
-    height:60%;
-    width:20%; 
+    height:60vh;
+    width:20%;
 }
 .film:hover > .all2:not(:hover){
     filter: blur(2px);
