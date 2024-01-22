@@ -277,3 +277,33 @@
 .film:hover > .all2:not(:hover){
     filter: blur(2px);
 }
+
+.forbox{
+    display: grid;
+    grid-template-columns: repeat(4,150px);
+    grid-template-rows: repeat(4,150px);
+    grid-gap: 1em;
+    justify-content: center;
+    position: relative;
+}
+.box{
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    /* color: var(--clr-light); */
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+.item1{
+    position:absolute;
+    top: -50px;;
+    right:-50px;
+}
+/* .item2{
+    position: absolute;
+    bottom:0;
+    right:0;
+} */
