@@ -254,6 +254,9 @@
     justify-content: center;
     align-items: center;
     height:50vh;
+    transform-style: preserve-3d;
+    position:relative;
+    perspective: 1000px;
 }
 .all2{
     height:50vh;
@@ -307,3 +310,73 @@
     bottom:0;
     right:0;
 } */
+
+.skew{
+    background-color: black;
+    color:blanchedalmond;
+    height: 50%;
+    width:20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition:transform 0.8s;
+    transition-property: all;
+    /* perspective: 1000px; */
+    /* position:relative; */
+}
+.skew:hover{
+    /* transform:rotateX(60deg) rotateY(30deg) rotateZ(10deg); */
+    transform:rotate(-30deg, -30deg) ;
+    /* transform-style: preserve-3d;
+    transform-origin: right bottom; */
+    /* perspective: 100px; */
+    /* height:70%;
+    width:25%; */
+    /* transform: matrix(1, -0.3, 0, 1, 0, 0); */
+    /* transform:skew(10deg , 0deg); */
+    /* background-color: aqua; */
+    
+}
+@property --gradient{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+@keyframes rotation{
+    0% { --gradient: 0deg;}
+    100% { --gradient: 360deg;}
+}
+body{
+    min-height: 100vh;
+    background: black;
+    display: grid;
+    place-content: center;
+}
+.card{
+    height:60vh;
+    background: rgb(124, 52, 52);
+    aspect-ratio: 1/1.5;
+    border-radius: 0.5m;
+    position: relative;
+}
+
+.card::before,
+.card::after{
+    content: "";
+    position:absolute;
+    inset: -0.5rem;
+    z-index: -1;
+    background: conic-gradient(
+        from var(--gradient),
+        #ec0d14,
+        #a00d0d,
+        #650407,
+        #a00d0d,
+        #ec0d14
+    );
+    border-radius: inherit;
+    animation: rotation 20s linear infinite;
+}
+.card::after{
+    filter: blur(3.5rem);
+}
